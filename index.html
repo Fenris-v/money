@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="firstScreen_right">
                     <img src="images/main/form-bg.png" alt="bg">
                     <img src="images/main/money.png" alt="bg">
@@ -103,7 +103,226 @@
                     <p class="smallText">Отправляя заявку, вы принимаете условия обработки персональных данных</p>
                 </div>
 
-                    <img class="firstScreen__man" src="images/main/man.png" alt="man"/>
+                <img class="firstScreen__man" src="images/main/man.png" alt="man"/>
+
+                <a class="firstScreen__btn" href="#">
+                    <img src="images/main/btn.png" alt="btn">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_calculator">
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="innerTitle rectangle_center">
+                <span>Рассчитайте</span> <br/> кредитный займ <br/> под залог ПТС
+            </div>
+
+            <div class="calculator__container">
+                <form action="#" method="get">
+                    <ul>
+                        <li>
+                            <div class="calculator__num">
+                                01
+                            </div>
+                            <div class="calculator__title">
+                                Выберите сумму займа:
+                            </div>
+                            <div class="rangeSlider">
+                                <!--                                TODO-->
+                            </div>
+                            <div class="calculator__field">
+                                <input class="input_round" type="text" name="creditSum" id="creditSum">
+                                <label for="creditSum">рублей</label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="calculator__num">
+                                02
+                            </div>
+                            <div class="calculator__title">
+                                Выберите срок займа:
+                            </div>
+                            <div class="rangeSlider">
+                                <!--                                TODO-->
+                            </div>
+                            <div class="calculator__field">
+                                <input class="input_round" type="text" name="creditTerm" id="creditTerm">
+                                <label for="creditTerm">месяцев</label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="calculator__num">
+                                03
+                            </div>
+                            <div class="calculator__title">
+                                Ваш ежемесячный платеж:
+                            </div>
+                            <div class="rangeSlider">
+                                <!--                                TODO-->
+                            </div>
+                            <div class="calculator__field">
+                                <input class="input_round" type="text" name="monthPay" id="monthPay">
+                                <label for="monthPay">рублей</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr/>
+
+                    <div class="calculator__radio">
+                        <label><input type="radio" name="owner" checked>Автомобиль находится у владельца</label>
+                        <label><input type="radio" name="owner">Автомобиль находится у нас</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="calculator_bottom">
+                <div class="calculator__sum">
+                    Сумма к выплате: <span id="sumForPay">1 800 000</span> <span>рублей</span>
+                </div>
+                <div class="calculator__percent">
+                    Ваша ставка: <span id="percentForPay">2</span><span>%</span>
+                </div>
+                <a href="#" class="btn_red btn">Получить одобрение</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_time">
+    <div class="wrapper">
+        <div class="time">
+            <div class="innerTitle rectangle_center rectangle_top">
+                Получите <br/> <span>деньги за 2 часа</span>
+            </div>
+            <div class="subtitle">
+                в Алвек-Лизинг!
+            </div>
+
+            <div class="time__container">
+                <img src="images/main/hand.png" alt="money">
+
+                <div class="time__item first">
+                    <img src="images/main/1.png" alt="icon">
+                    <div class="time__item__title">
+                        От <span>30 000</span> <br/> до <span>3 000 000</span> <br/> рублей
+                    </div>
+                </div>
+                <div class="time__item second">
+                    <img src="images/main/2.png" alt="icon">
+                    <div class="time__item__title">
+                        От <span>2 до 36</span> <br/> месяцев
+                        <p>Досрочное расторжение <br/> без комиссии</p>
+                    </div>
+                </div>
+                <div class="time__item third">
+                    <img src="images/main/3.png" alt="icon">
+                    <div class="time__item__title">
+                        От 2,5% деньги под ПТС <br/> От 2% лизинг авто
+                    </div>
+                </div>
+                <div class="time__item fourth">
+                    <img src="images/main/4.png" alt="icon">
+                    <div class="time__item__title">
+                        <span>Без</span> кредитной <br/> <span>истории!</span>
+                        <p>Займ выдается сразу в <br/> день обращения</p>
+                    </div>
+                </div>
+                <div class="time__item fifth">
+                    <img src="images/main/5.png" alt="icon">
+                    <div class="time__item__title">
+                        <span>Займы <br/> без справок</span> <br/> о доходах!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_requirements">
+    <div class="wrapper_fullHD">
+        <img src="images/main/requirements.png" alt="photo">
+        <div class="wrapper">
+            <div class="requirements">
+                <div class="innerTitle_normal">Требования к <br/> заемщику автомобиля:</div>
+                <ul>
+                    <li class="requirements__item">
+                        <div class="firstScreen__conditions__icon">
+                            <img src="images/icon/star.svg" alt="icon">
+                        </div>
+                        <p><span>Гражданство <br/></span>России</p>
+                    </li>
+                    <li class="requirements__item">
+                        <div class="firstScreen__conditions__icon">
+                            <img src="images/icon/star.svg" alt="icon">
+                        </div>
+                        <p><span>Возраст <br/></span>от 18 лет</p>
+                    </li>
+                    <li class="requirements__item">
+                        <div class="firstScreen__conditions__icon">
+                            <img src="images/icon/star.svg" alt="icon">
+                        </div>
+                        <p><span>Клиент - <br/></span>владелец ТС</p>
+                    </li>
+                </ul>
+                <div class="requirements__subtitle">
+                    Принимаются иномарки, отечественные <br/> автомобили и спецтехника:
+                </div>
+                <ul class="requirements__list">
+                    <li><p>Автомобиль <span>зарегистрирован в РФ</span></p></li>
+                    <li><p><span>Класс В</span> - легковые автомобили, легкие грузовики, микроавтобусы</p></li>
+                    <li><p><span>Отсутствие требований третьих лиц</span> в отношении автомобиля</p></li>
+                    <li><p>Автомобиль в <span>исправном состоянии, небитый</span></p></li>
+                    <li><p>Оценочная стоимость <span>не менее 100 000 рулей</span> (оценка в офисе или удаленно)</p>
+                    </li>
+                    <li><p>Иномарки <span>не старше 15 лет</span>, отечественные и китайские не старше 6 лет.</p></li>
+                </ul>
+                <a href="#" class="btn btn_red">отправить заявку</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_docs">
+    <div class="wrapper_fullHD">
+        <div class="wrapper">
+            <div class="docs">
+                <div class="innerTitle_normal">
+                    Какие документы нужны чтобы получить займ?
+                </div>
+
+                <ul class="docs__list">
+                    <li>
+                        <img src="images/main/passport.png" alt="icon">
+                        <p>Паспорт владельца автомобиля</p>
+                    </li>
+                    <li>
+                        <img src="images/main/pts.png" alt="icon">
+                        <p>Паспорт технического средства <span>(ПТС)</span></p>
+                    </li>
+                    <li>
+                        <img src="images/main/reg.png" alt="icon">
+                        <p>Свидетельство о регистрации <span>(СТС)</span></p>
+                    </li>
+                </ul>
+
+                <div class="docs__subtitle">Процесс получения денег под ПТС или автомобиль, а также Лизинг автомобилей
+                </div>
+
+                <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по автомобилю и вам.
+                    На основе полученных данных сообщает Вам - одобрено или нет.</p>
+                <p>После одобрения заявки, Вы приезжаете в офис, где уже подготовлен пакет документов,специалисту
+                    осталось только осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
+                    получаете деньги или авто удобным способом - наличными, через перевод в банк, на банковскую карту
+                    любого банка.</p>
+
+                <a href="#" class="btn btn_red">отправить заявку</a>
+
+                <img class="docs__bg" src="images/main/docs.png" alt="bg">
             </div>
         </div>
     </div>

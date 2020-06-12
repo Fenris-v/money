@@ -11,6 +11,10 @@
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
 }
 @font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
+}
+@font-face {
   font-family: Proxima;
   src: url(../fonts/PROXIMA_NOVA_REGULAR.OTF);
 }
@@ -21,6 +25,10 @@
 @font-face {
   font-family: ProximaLight;
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
+}
+@font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
 }
 /* RESET */
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
@@ -527,6 +535,9 @@ h1 {
   background: #d51c2a;
 }
 
+.s_firstScreen {
+  min-height: 800px;
+}
 .s_firstScreen .wrapper_fullHD {
   position: absolute;
   top: 0;
@@ -695,6 +706,21 @@ h1 {
   z-index: 3;
   max-height: 480px;
 }
+.firstScreen__btn {
+  width: 100px;
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  -moz-transform: translate(-50%, 30%);
+  -ms-transform: translate(-50%, 30%);
+  -o-transform: translate(-50%, 30%);
+  -webkit-transform: translate(-50%, 30%);
+  transform: translate(-50%, 30%);
+  bottom: 0;
+}
+.firstScreen__btn img {
+  width: 100%;
+}
 
 .input_round {
   font-size: 16px;
@@ -733,6 +759,401 @@ input.btn_red {
   margin: 0 auto;
 }
 
+.innerTitle {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #000000;
+  line-height: 65px;
+  position: relative;
+}
+.innerTitle::before, .innerTitle::after {
+  position: absolute;
+  display: block;
+  top: 50%;
+}
+.innerTitle::before {
+  content: url("../images/main/rectangle.png");
+  left: 0;
+  -moz-transform: translate(-110%, -60%);
+  -ms-transform: translate(-110%, -60%);
+  -o-transform: translate(-110%, -60%);
+  -webkit-transform: translate(-110%, -60%);
+  transform: translate(-110%, -60%);
+}
+.innerTitle::after {
+  display: block;
+  right: 0;
+  content: url("../images/main/rectangle_rotate.png");
+  -moz-transform: translate(110%, -60%);
+  -ms-transform: translate(110%, -60%);
+  -o-transform: translate(110%, -60%);
+  -webkit-transform: translate(110%, -60%);
+  transform: translate(110%, -60%);
+}
+.innerTitle span {
+  color: #82766d;
+}
+.innerTitle.rectangle_center {
+  width: 500px;
+  margin-bottom: 80px;
+}
+
+.calculator {
+  position: relative;
+  z-index: 2;
+}
+.calculator__container {
+  background: #f4f4f2;
+  padding: 60px 60px 0;
+}
+.calculator__container hr {
+  border: none;
+  height: 1px;
+  background: #ffffff;
+  margin: 0 -60px;
+}
+.calculator__container ul {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator__container li {
+  position: relative;
+  width: 28%;
+  padding-bottom: 50px;
+}
+.calculator__title {
+  font-size: 20px;
+  font-weight: 900;
+  font-family: ProximaSemibold, sans-serif;
+  color: #000000;
+  line-height: 26px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.calculator__num {
+  font-size: 75px;
+  font-weight: 900;
+  font-family: ProximaSemibold, sans-serif;
+  color: #ffffff;
+  line-height: 26px;
+  position: absolute;
+  left: 15px;
+}
+.calculator__field {
+  position: relative;
+}
+.calculator__field input {
+  width: 100%;
+  padding: 0 130px 0 30px;
+}
+.calculator__field label {
+  position: absolute;
+  right: 30px;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #000000;
+  line-height: 50px;
+}
+.calculator__radio label {
+  margin-right: 80px;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #000000;
+  line-height: 65px;
+}
+.calculator__radio input {
+  margin-right: 20px;
+}
+.calculator_bottom {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  background: #343a46;
+  align-items: center;
+}
+.calculator__sum, .calculator__percent {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #ffffff;
+  line-height: 1;
+}
+.calculator__sum span, .calculator__percent span {
+  font-family: ProximaBold, sans-serif;
+  font-weight: bold;
+}
+
+.innerTitle.rectangle_top {
+  margin-bottom: 20px;
+}
+
+.innerTitle.rectangle_top::before {
+  -moz-transform: translate(35%, -115%);
+  -ms-transform: translate(35%, -115%);
+  -o-transform: translate(35%, -115%);
+  -webkit-transform: translate(35%, -115%);
+  transform: translate(35%, -115%);
+}
+
+.innerTitle.rectangle_top::after {
+  -moz-transform: translate(-35%, -115%);
+  -ms-transform: translate(-35%, -115%);
+  -o-transform: translate(-35%, -115%);
+  -webkit-transform: translate(-35%, -115%);
+  transform: translate(-35%, -115%);
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: ProximaLight, sans-serif;
+  color: #000000;
+  line-height: 1;
+  text-align: center;
+}
+
+.s_time {
+  background: #f4f4f2;
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.time__container {
+  position: relative;
+  margin: -25px 0 0;
+  text-align: center;
+}
+.time__item {
+  display: flex;
+  max-width: 450px;
+  align-items: center;
+  text-align: left;
+  position: absolute;
+}
+.time__item img {
+  margin-right: 20px;
+  width: 150px;
+}
+.time__item__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #000000;
+  line-height: 30px;
+}
+.time__item__title span {
+  color: #82766d;
+}
+.time__item p {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #000000;
+  line-height: 26px;
+}
+
+.time__container {
+  height: 700px;
+}
+.time__container .first {
+  top: 15%;
+  left: 70%;
+}
+.time__container .second {
+  top: 55%;
+  left: 63%;
+}
+.time__container .third {
+  bottom: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+.time__container .third img {
+  margin: 0 0 20px;
+}
+.time__container .fourth {
+  top: 55%;
+  right: 63%;
+  flex-direction: row-reverse;
+}
+.time__container .fourth img {
+  margin: 0 0 0 20px;
+}
+.time__container .fifth {
+  top: 15%;
+  right: 70%;
+  flex-direction: row-reverse;
+}
+.time__container .fifth img {
+  margin: 0 0 0 20px;
+}
+
+.s_requirements {
+  position: relative;
+  margin-top: -100px;
+  z-index: 1;
+  height: 1200px;
+  margin-bottom: 80px;
+}
+.s_requirements .wrapper_fullHD > img {
+  max-width: 100%;
+  height: 1200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.innerTitle_normal {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #ffffff;
+  line-height: 65px;
+  margin-bottom: 50px;
+}
+
+.requirements {
+  position: relative;
+  z-index: 2;
+  padding-top: 150px;
+  width: 70%;
+}
+.requirements ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.requirements__item {
+  display: flex;
+  width: 30%;
+}
+.requirements__item img {
+  width: 50px;
+}
+.requirements__item p {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #ffffff;
+  line-height: 30px;
+}
+.requirements__item p span {
+  font-family: ProximaBold, sans-serif;
+  font-weight: bold;
+}
+.requirements__subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #ffffff;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+.requirements__list {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-left: 15px;
+}
+.requirements__list li {
+  color: #d51c2a;
+}
+.requirements__list li p {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #ffffff;
+  line-height: 1;
+}
+.requirements__list li p span {
+  font-family: ProximaBold, sans-serif;
+  font-weight: bold;
+}
+.requirements .btn {
+  display: inline-block;
+}
+
+.s_docs .wrapper_fullHD {
+  overflow: hidden;
+}
+
+.docs {
+  width: 70%;
+  margin-left: auto;
+  position: relative;
+}
+.docs .innerTitle_normal {
+  color: #000000;
+  max-width: 750px;
+}
+.docs__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.docs__list li {
+  width: 30%;
+  display: flex;
+}
+.docs__list li img {
+  width: 80px;
+  margin-right: 20px;
+  align-items: center;
+}
+.docs__list li p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #000000;
+  line-height: 26px;
+  margin: 0;
+}
+.docs__list li p span {
+  font-family: Proxima, sans-serif;
+  font-weight: normal;
+}
+.docs__subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: ProximaBold, sans-serif;
+  color: #000000;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+.docs p {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Proxima, sans-serif;
+  color: #000000;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+.docs .btn {
+  display: inline-block;
+}
+.docs__bg {
+  position: absolute;
+  top: 0;
+  right: 93%;
+  z-index: -1;
+}
+
 /* RESPONSIVE */
 @font-face {
   font-family: Proxima;
@@ -747,6 +1168,10 @@ input.btn_red {
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
 }
 @font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
+}
+@font-face {
   font-family: Proxima;
   src: url(../fonts/PROXIMA_NOVA_REGULAR.OTF);
 }
@@ -757,6 +1182,10 @@ input.btn_red {
 @font-face {
   font-family: ProximaLight;
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
+}
+@font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
 }
 /* HAMBURGER */
 @font-face {
@@ -772,6 +1201,10 @@ input.btn_red {
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
 }
 @font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
+}
+@font-face {
   font-family: Proxima;
   src: url(../fonts/PROXIMA_NOVA_REGULAR.OTF);
 }
@@ -782,6 +1215,10 @@ input.btn_red {
 @font-face {
   font-family: ProximaLight;
   src: url(../fonts/PROXIMA_NOVA_CONDENSED_LIGHT.OTF);
+}
+@font-face {
+  font-family: ProximaSemibold;
+  src: url(../fonts/PROXIMA_NOVA_SEMIBOLD.OTF);
 }
 .header__hamburger, .headerNav_adaptive {
   display: none;
