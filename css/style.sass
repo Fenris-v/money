@@ -1,0 +1,241 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "normalize"
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+h1
+  margin: 0
+
+.wrapper
+  margin: 0 auto
+  max-width: 1200px
+  width: 100%
+  @include box-sizing()
+
+.wrapper_fullHD
+  max-width: 1920px
+  width: 100%
+  margin: 0 auto
+
+.header
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 0
+  z-index: 2
+
+  &__logo
+    width: 310px
+    margin-right: auto
+
+  &__social
+    ul
+      display: flex
+
+      li
+        margin-left: 15px
+
+    a
+      width: 50px
+      display: block
+
+      img
+        width: 100%
+
+      .round
+        @include border-radius()
+
+  &__contacts
+    margin-left: 40px
+
+    p
+      @include font($size: 16px)
+      margin: 0 0 10px
+
+    a
+      @include font($textBlack, $regular, normal, 26px)
+
+      span
+        font-family: $bold
+        font-weight: bold
+
+      &:first-child
+        margin-bottom: 10px
+
+  .btn
+    margin-left: 60px
+
+.btn
+  display: block
+  padding: 0 40px
+  @include border-radius(25px)
+  text-transform: uppercase
+  @include font($size: 14px, $line: 50px, $color: $white)
+
+.btn_red
+  background: $red
+
+.s_firstScreen
+  .wrapper_fullHD
+    position: absolute
+    top: 0
+    left: 50%
+    +transform(translateX(-50%))
+    z-index: 1
+    min-height: 800px
+    overflow: hidden
+
+    .firstScreen__bg
+      max-width: 100%
+      min-height: 800px
+      @include object-fit()
+      position: absolute
+
+    .wrapper
+      position: relative
+      z-index: 2
+
+.firstScreen
+  margin-top: 200px
+  display: flex
+  justify-content: space-between
+
+  &_left
+    width: 30%
+
+  h1
+    @include font($textBlack, $bold, bold, 60px, 65px)
+    min-width: 500px
+    margin: 0 0 40px
+
+  &__subtitle
+    @include font($textBlack, $light, 300, 34px)
+    margin: 0 0 50px
+
+    &__container
+      position: relative
+
+      img
+        position: absolute
+        bottom: 0
+        left: 100%
+
+  &__conditions
+    li
+      display: flex
+      margin-bottom: 50px
+
+    &__icon
+      width: 90px
+      height: 90px
+      background: $white
+      @include border-radius()
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 20px
+
+      img
+        width: 55px
+        @include object-fit(contain)
+        min-height: auto
+
+    &__content
+      @include font($textBlack, $regular, normal, 16px, 20px)
+      max-width: 180px
+
+      p
+        margin: 0
+
+        &.firstScreen__conditions__content__title
+          margin-bottom: 10px
+
+      &__title
+        @include font($textBlack, $bold, bold, 24px, 30px)
+
+        span
+          color: $red
+
+  &_right
+    width: 390px
+    text-align: center
+    padding: 60px 30px 20px
+    @include box-sizing()
+
+    img
+      position: absolute
+      bottom: 10px
+      right: 0
+      z-index: 2
+
+      &:nth-child(2)
+        right: -45px
+        bottom: 50px
+
+    &__title
+      @include font($white, $bold, bold, 34px)
+      margin: 0 0 30px
+      z-index: 3
+      position: relative
+
+    &__subtitle
+      @include font($white, $light, 300, 22px, 26px)
+      position: relative
+      z-index: 3
+
+      span
+        font-family: $bold
+        font-weight: bold
+
+    form
+      position: relative
+      z-index: 3
+      margin-bottom: 30px
+
+      li
+        margin-bottom: 20px
+
+      input
+        width: 100%
+
+  &__man
+    position: absolute
+    bottom: 0
+    left: 50%
+    +transform(translateX(-50%))
+    z-index: 3
+    max-height: 480px
+
+.input_round
+  @include font($textBlack, $regular, normal, 16px, 50px)
+  @include border-radius(25px)
+  outline: none
+  border: none
+  padding: 0 30px
+  @include box-sizing()
+
+input.btn_red
+  border: none
+  outline: none
+  @include box-shadow(0 25px 30px rgba(213,28,42, 0.3))
+
+.smallText
+  @include font($white, $regular, normal, 12px, 20px)
+  position: relative
+  z-index: 2
+  max-width: 200px
+  margin: 0 auto
+
+/* RESPONSIVE */
+@import "responsive"
+/* HAMBURGER */
+@import "hamburger"
