@@ -1,16 +1,501 @@
 @import "variables"
 @import "prefixes"
 
-@media only screen and (max-width: 1600px)
-
-@media only screen and (max-width: 1500px)
-
 @media only screen and (max-width: 1200px)
+  .wrapper
+    padding: 0 15px
+
+  .firstScreen_right
+    margin-right: -15px
+
+  .time__container
+    height: auto
+    margin: 0
+    padding: 30px 0 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+    & > img
+      display: none
+
+  .time__item
+    position: static
+    width: 45%
+    +transform(translate(0))
+
+    img
+      margin-right: 20px
+
+    &.third
+      flex-direction: row
+      +transform(translate(0))
+
+      img
+        margin-right: 20px
+
+    &.fourth, &.fifth
+      flex-direction: row
+
+      img
+        margin-right: 20px
+
+  .docs__list
+    li
+      flex-direction: column
+      align-items: center
+
+      img
+        margin-right: 0
+        margin-bottom: 10px
+
+      p
+        text-align: center
+
+  .footer_bottom
+    flex-wrap: wrap
+    justify-content: space-between
+
+    & > a
+      width: 40%
+
+    & > p
+      width: 58%
+      text-align: right
+
+  .footer__developer
+    margin:  0 auto
+
+@media only screen and (max-width: 1100px)
+  .firstScreen__man
+    display: none
+
+  .header__social ul li
+    margin-left: 10px
+
+  .header__social a
+    width: 30px
+
+  .header__contacts a
+    white-space: nowrap
+
+  .calculator__container
+    padding: 30px 20px 0
+
+  .calculator_bottom
+    padding: 30px 20px
 
 @media only screen and (max-width: 1000px)
+  header
+    background: $greyBg
+
+  .header
+    flex-wrap: wrap
+    padding-bottom: 40px
+
+    &__logo
+     margin-bottom: 20px
+
+    .header__social
+      width: 30%
+
+      ul
+        justify-content: flex-end
+
+    .header__contacts
+      width: 50%
+
+    .btn_red
+      margin: 0
+      @include box-sizing()
+      display: inline-block
+
+  .s_firstScreen
+    background: $greyBg
+    min-height: auto
+    margin-bottom: 80px
+
+    .wrapper_fullHD
+      position: static
+      +transform(translate(0))
+      min-height: auto
+      overflow: visible
+
+  .firstScreen
+    margin-top: 0
+
+    h1
+      font-size: 45px
+      margin-bottom: 30px
+      line-height: 1.2
+
+    &_left
+      width: 45%
+
+      .firstScreen__subtitle
+        margin: 0 10px 0
+
+        &__container
+          margin-bottom: 30px
+          display: flex
+
+    &__bg
+      display: none
+
+    &__btn
+      +transform(translate(-50%, 50%))
+
+  .firstScreen__subtitle__container img
+    position: static
+
+  .firstScreen_right
+    background: $blue
+    margin-right: 0
+
+    img
+      display: none
+
+  .calculator__container ul
+    flex-wrap: wrap
+
+  .calculator__container li
+    width: 45%
+
+    &:last-child
+      margin: 0 auto
+
+  .calculator_bottom
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .btn_red
+      margin: 0 auto
+
+  .calculator__sum
+    width: 60%
+    margin-bottom: 20px
+
+  .sumForPay
+    width: 35%
+
+  .s_requirements
+    background: $blue
+    height: auto
+
+    .wrapper_fullHD
+      & > img
+        display: none
+
+  .requirements
+    width: 100%
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .docs
+    width: 100%
+
+    &__bg
+      display: none
+
+  .s_feedback
+    height: auto
+    margin-bottom: 50px
+
+    .wrapper_fullHD
+      background: $greyBg
+      height: auto
+
+  .s_feedback__bg
+    display: none
+
+  .s_feedback__dogs
+    display: none
+
+  .feedback
+    padding-top: 50px
+
+    .slick-arrow
+      bottom: 15px
+
+    .innerTitle_normal
+      margin-bottom: 30px
+
+  .s_terms
+    margin-bottom: 80px
+
+  .terms .innerTitle_normal
+    margin-bottom: 30px
+
+  .terms__container
+    flex-direction: column-reverse
+
+  .terms_right
+    width: 100%
+
+  .terms__subtitle, .terms_right p:last-child
+    margin-bottom: 20px
+
+  .terms_left
+    width: 100%
+
+  .terms__list
+    flex-direction: row
+
+    &__item
+      align-items: center
+      flex-direction: column
+      width: 30%
+      text-align: center
+
+      img
+        margin: 0 0 10px
+
+  .subtitle_line
+    margin-bottom: 40px
+
+  .innerTitle, .innerTitle_normal
+    font-size: 45px
+    margin-bottom: 30px
+    line-height: 1.2
+
+  .s_additional
+    margin-bottom: 0
+
+  .footer__developer p
+    width: auto
+    white-space: nowrap
+
+  .slick-dots
+    +transform(translateX(-50%))
+    bottom: 30px
+
+  .additional__list
+    margin-bottom: 40px
 
 @media only screen and (max-width: 900px)
+  .firstScreen
+    flex-wrap: wrap
+
+  .firstScreen_left
+    width: 100%
+
+  .firstScreen__conditions
+    display: flex
+    justify-content: space-between
+
+    li
+      width: 45%
+
+  .firstScreen_right
+    margin: 0 auto 60px
+
+  .additional__list
+    flex-wrap: wrap
+
+    li
+      width: 48%
+      margin-bottom: 50px
+
+  .innerTitle, h1, .innerTitle, .innerTitle_normal
+    font-size: 30px
+
+  .innerTitle.rectangle_center
+    margin-bottom: 40px
+
+  .calculator__radio
+    flex-direction: column
+
+    .calculator__radio__container
+      &:first-child .customRadio
+        top: 26%
+
+      &:last-child .customRadio
+        top: 76%
+
+  .calculator__sum
+    margin-bottom: 0
+
+  .calculator .btn_red
+    margin-top: 20px
+
+  .s_time
+    margin: 0
+    padding-top: 50px
+
+  .innerTitle.rectangle_center
+    margin-bottom: 20px
+
+  .time__item
+    width: 100%
+    margin-bottom: 20px
+
+  .s_requirements
+    margin-bottom: 40px
+
+  .requirements ul
+    flex-direction: column
+    margin-bottom: 20px
+
+  .requirements__item
+    width: 100%
+    margin-bottom: 20px
+
+  .docs__subtitle
+    margin-bottom: 30px
+
+  .docs p
+    margin-bottom: 20px
+
+  .terms__list
+    flex-direction: column
+
+    &__item
+      width: 100%
+      margin-bottom: 20px
+
+  .s_terms
+    margin-bottom: 40px
+
+  .s_map
+    height: auto
+    margin-bottom: 40px
+
+    .wrapper
+      height: auto
+      position: static
+      +transform(translate(0))
+
+  .map
+    padding-top: 30px
+
+  .map__address
+    background: $greyBg
+    position: static
+    +transform(translate(0))
+    margin: 0 auto
+
+  .footer_top
+    flex-wrap: wrap
+
+  .footer_top .footer__license
+    width: 48%
+
+  .footer_top .footer__terms
+    width: 50%
+    margin: 0 auto
+    padding-top: 20px
+
+  .footer_bottom
+    flex-direction: column
+    align-items: center
+
+  .footer_bottom > a, .footer_bottom > p, .footer_bottom .footer__developer
+    width: 100%
+    text-align: center
+    line-height: 1.5
 
 @media only screen and (max-width: 767px)
 
 @media only screen and (max-width: 640px)
+  .header
+    flex-direction: column
+
+    &__logo
+      max-width: 100%
+
+  .header .header__social
+    width: auto
+
+  .header__social ul
+    margin-bottom: 20px
+
+    li:first-child
+      margin-left: 0
+
+  .header .header__contacts
+    margin: 0 0 20px
+    width: auto
+
+  .firstScreen h1
+    font-size: 30px
+    min-width: 100%
+
+  .firstScreen__conditions
+    flex-wrap: wrap
+
+    li
+      width: 100%
+
+  .firstScreen__subtitle__container
+    flex-direction: column
+
+  .firstScreen_left .firstScreen__subtitle
+    margin-bottom: 20px
+
+  .firstScreen__subtitle__container img
+    width: auto
+    @include object-fit(contain)
+
+  .innerTitle
+    width: 100% !important
+
+    &::after, &::before
+      display: none
+
+  .calculator__container li
+    width: 100%
+
+  .calculator__radio label
+    line-height: 1.3
+
+  .calculator__radio .calculator__radio__container:first-child .customRadio
+    top: 14%
+
+  .calculator__radio .calculator__radio__container:last-child .customRadio
+    top: 64%
+
+  .calculator__sum, .calculator__percent, .calculator_bottom .btn_red
+    width: 100%
+    margin-bottom: 10px
+
+  .time__item
+    flex-direction: column
+    text-align: center
+
+    &.third, &.fourth, &.fifth
+      flex-direction: column
+
+  .time__item img
+    margin: 0 0 10px !important
+
+  .docs__list
+    flex-direction: column
+
+    li
+      width: 100%
+      margin-bottom: 20px
+      flex-direction: row
+
+      p
+        text-align: left
+
+  .additional__list li
+    width: 100%
+
+  .map__address .btn
+    white-space: normal
+    padding: 15px
+    line-height: 1.3
+
+  .map__address
+    width: 100%
+
+  .footer_top
+    flex-direction: column
+
+  .footer_top > img, .footer_top .footer__license, .footer_top .footer__terms
+    width: 100%
+    margin-bottom: 20px
+
+  .footer_top .footer__terms
+    padding: 0

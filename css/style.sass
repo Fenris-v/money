@@ -84,6 +84,7 @@ h1, p
 .btn_red
   background: $red
   @include transition()
+  white-space: nowrap
 
   &:hover
     opacity: 0.8
@@ -195,6 +196,7 @@ h1, p
       position: relative
 
     &__subtitle
+      margin-bottom: 20px
       @include font($white, $light, 300, 22px, 26px)
       position: relative
       z-index: 3
@@ -281,6 +283,9 @@ input.btn_red
   &.rectangle_center
     width: 500px
     margin-bottom: 80px
+
+.s_calculator, .s_terms
+  overflow: hidden
 
 .calculator
   position: relative
@@ -542,6 +547,10 @@ input.btn_red
 
     li
       color: $red
+      margin-bottom: 20px
+
+      &:last-child
+        margin-bottom: 0
 
       p
         @include font($white, $regular, normal, 18px)
@@ -655,8 +664,11 @@ input.btn_red
     @include border-radius(5px)
     margin: 0 10px
     height: 400px
-    overflow: hidden
     @include transition()
+
+    &__overflow
+      overflow: hidden
+      max-height: 100%
 
     &:hover
       @include box-shadow()

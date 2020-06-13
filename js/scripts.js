@@ -101,15 +101,15 @@ $(document).ready(() => {
         autoplay: false,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 900,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 640,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 }
             }
         ]
