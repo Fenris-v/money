@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M448,86v368H128V6h240L448,86z"/>
+	<path fill="#DCE1E7" d="M368,86h80v16h-80V86z"/>
+	<path fill="#DCE1E7" d="M128,438h320v16H128V438z"/>
+	<path fill="#95A4B6" d="M448,86h-80V6"/>
+	<g>
+		<path fill="#95A4B6" d="M168,390v116h-8l-32-32l-32,32h-8V390"/>
+		<path fill="#72869E" d="M88,411.3c11.8,6.8,25.4,10.7,40,10.7s28.2-3.9,40-10.7V390H88V411.3z"/>
+		<circle fill="#DCE1E7" cx="128" cy="342" r="64"/>
+		<path fill="#B9C2CF" d="M128,390c-32.6,0-59.5-24.4-63.5-56c-0.3,2.6-0.5,5.3-0.5,8c0,35.3,28.7,64,64,64s64-28.7,64-64
+			c0-2.7-0.2-5.4-0.5-8C187.5,365.6,160.6,390,128,390z"/>
+		<circle fill="#B9C2CF" cx="128" cy="342" r="32"/>
+		<g>
+			<path d="M370.5,0H122v272.3c-35.8,3.1-64,33.1-64,69.7c0,21,9.3,39.9,24,52.7V512h16.5l29.5-29.5l29.5,29.5H174v-52h280V83.5
+				L370.5,0z M374,20.5L433.5,80H374V20.5z M162,499.5l-34-34l-34,34v-96.4c10.1,5.6,21.7,8.8,34,8.8s23.9-3.2,34-8.8V499.5z
+				 M128,400c-32,0-58-26-58-58s26-58,58-58s58,26,58,58S160,400,128,400z M442,448H174v-53.3c14.7-12.8,24-31.7,24-52.7
+				c0-36.6-28.2-66.7-64-69.7V12h228v80h80V448z"/>
+			<path d="M176,64h96v12h-96V64z"/>
+			<path d="M176,96h64v12h-64V96z"/>
+			<path d="M176,144h224v12H176V144z"/>
+			<path d="M176,176h224v12H176V176z"/>
+			<path d="M176,240h224v12H176V240z"/>
+			<path d="M208,272h160v12H208V272z"/>
+			<path d="M176,208h224v12H176V208z"/>
+			<path d="M304,320h96v12h-96V320z"/>
+			<path d="M336,352h64v12h-64V352z"/>
+			<path d="M128,304c-21,0-38,17-38,38s17,38,38,38s38-17,38-38S149,304,128,304z M128,368c-14.3,0-26-11.7-26-26s11.7-26,26-26
+				s26,11.7,26,26S142.3,368,128,368z"/>
+		</g>
+	</g>
+</g>
+</svg>
