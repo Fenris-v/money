@@ -9,6 +9,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -93,7 +94,8 @@
                         <ul>
                             <li>
                                 <label for="phone"></label>
-                                <input class="input_round" type="text" name="phone" id="phone">
+                                <input class="input_round" type="tel" placeholder="+7 ___-___-__-__" name="phone"
+                                       id="phone">
                             </li>
                             <li>
                                 <input type="submit" value="оставить заявку" class="btn btn_red">
@@ -105,7 +107,7 @@
 
                 <img class="firstScreen__man" src="images/main/man.png" alt="man"/>
 
-                <a class="firstScreen__btn" href="#">
+                <a class="firstScreen__btn anchor" href="#s_calculator">
                     <img src="images/main/btn.png" alt="btn">
                 </a>
             </div>
@@ -113,7 +115,7 @@
     </div>
 </section>
 
-<section class="s_calculator">
+<section id="s_calculator" class="s_calculator">
     <div class="wrapper">
         <div class="calculator">
             <div class="innerTitle rectangle_center">
@@ -130,9 +132,13 @@
                             <div class="calculator__title">
                                 Выберите сумму займа:
                             </div>
-                            <div class="rangeSlider">
-                                <!--                                TODO-->
+
+                            <div class="rangeSlider" id="rangeSlider_first"></div>
+                            <div class="range_nums range_nums_first">
+                                <p class="range_nums_min">2 000</p>
+                                <p class="range_nums_max">2 000 000</p>
                             </div>
+
                             <div class="calculator__field">
                                 <input class="input_round" type="text" name="creditSum" id="creditSum">
                                 <label for="creditSum">рублей</label>
@@ -146,9 +152,13 @@
                             <div class="calculator__title">
                                 Выберите срок займа:
                             </div>
-                            <div class="rangeSlider">
-                                <!--                                TODO-->
+
+                            <div class="rangeSlider" id="rangeSlider_second"></div>
+                            <div class="range_nums range_nums_second">
+                                <p class="range_nums_min">1</p>
+                                <p class="range_nums_max">60</p>
                             </div>
+
                             <div class="calculator__field">
                                 <input class="input_round" type="text" name="creditTerm" id="creditTerm">
                                 <label for="creditTerm">месяцев</label>
@@ -162,9 +172,13 @@
                             <div class="calculator__title">
                                 Ваш ежемесячный платеж:
                             </div>
-                            <div class="rangeSlider">
-                                <!--                                TODO-->
+
+                            <div class="rangeSlider" id="rangeSlider_third"></div>
+                            <div class="range_nums range_nums_third">
+                                <p class="range_nums_min">2 000</p>
+                                <p class="range_nums_max">2 000 000</p>
                             </div>
+
                             <div class="calculator__field">
                                 <input class="input_round" type="text" name="monthPay" id="monthPay">
                                 <label for="monthPay">рублей</label>
@@ -174,8 +188,13 @@
                     <hr/>
 
                     <div class="calculator__radio">
-                        <label><input type="radio" name="owner" checked>Автомобиль находится у владельца</label>
-                        <label><input type="radio" name="owner">Автомобиль находится у нас</label>
+                        <div class="calculator__radio__container">
+                            <div class="customRadio"></div>
+                            <label><input type="radio" name="owner" checked>Автомобиль находится у владельца</label>
+                        </div>
+                        <div class="calculator__radio__container">
+                            <div class="customRadio"></div>
+                            <label><input type="radio" name="owner">Автомобиль находится у нас</label></div>
                     </div>
                 </form>
             </div>
@@ -341,6 +360,65 @@
                     <div class="feedback__item">
                         <div class="feedback__item_top">
                             <img src="images/main/feedback1.png" alt="photo">
+                            <div class="feedback__item_top__content">
+                                <div class="feedback__item__name">Константин Геннадьевич</div>
+                                <div class="feedback__item__city">г. Санкт-Петербург</div>
+                            </div>
+                        </div>
+                        <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по автомобилю
+                            и вам. На основе полученных данных сообщает Вам - одобрено или нет.После одобрения заявки,
+                            Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
+                            осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
+                            получаете деньги. или авто удобным способом - наличными, через перевод в банк, на банковскую
+                            карту любого банка.</p>
+                    </div>
+
+                    <div class="feedback__item">
+                        <div class="feedback__item_top">
+                            <img src="images/main/feedback2.png" alt="photo">
+                            <div class="feedback__item_top__content">
+                                <div class="feedback__item__name">Константин Геннадьевич</div>
+                                <div class="feedback__item__city">г. Санкт-Петербург</div>
+                            </div>
+                        </div>
+                        <p>Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
+                            осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
+                            получаете деньги.</p>
+                    </div>
+
+                    <div class="feedback__item">
+                        <div class="feedback__item_top">
+                            <img src="images/main/feedback3.png" alt="photo">
+                            <div class="feedback__item_top__content">
+                                <div class="feedback__item__name">Константин Геннадьевич</div>
+                                <div class="feedback__item__city">г. Санкт-Петербург</div>
+                            </div>
+                        </div>
+                        <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по автомобилю
+                            и вам. На основе полученных данных сообщает Вам - одобрено или нет. После одобрения заявки,
+                            Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
+                            осмотреть автобиль и проверить документы.</p>
+                    </div>
+
+                    <div class="feedback__item">
+                        <div class="feedback__item_top">
+                            <img src="images/main/feedback4.png" alt="photo">
+                            <div class="feedback__item_top__content">
+                                <div class="feedback__item__name">Константин Геннадьевич</div>
+                                <div class="feedback__item__city">г. Санкт-Петербург</div>
+                            </div>
+                        </div>
+                        <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по автомобилю
+                            и вам. На основе полученных данных сообщает Вам - одобрено или нет.После одобрения заявки,
+                            Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
+                            осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
+                            получаете деньги. или авто удобным способом - наличными, через перевод в банк, на банковскую
+                            карту любого банка.</p>
+                    </div>
+
+                    <div class="feedback__item">
+                        <div class="feedback__item_top">
+                            <img src="images/main/feedback5.png" alt="photo">
                             <div class="feedback__item_top__content">
                                 <div class="feedback__item__name">Константин Геннадьевич</div>
                                 <div class="feedback__item__city">г. Санкт-Петербург</div>
@@ -533,6 +611,8 @@
 </footer>
 
 <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script src="js/slick.min.js" type="text/javascript"></script>
 <script src="js/scripts.js" type="text/javascript"></script>
 

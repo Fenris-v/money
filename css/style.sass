@@ -83,6 +83,11 @@ h1, p
 
 .btn_red
   background: $red
+  @include transition()
+
+  &:hover
+    opacity: 0.8
+    @include transition()
 
 .s_firstScreen
   min-height: 800px
@@ -323,12 +328,23 @@ input.btn_red
       @include font($textBlack, $regular, normal, 20px, 50px)
 
   &__radio
+    position: relative
+    display: flex
+
     label
       margin-right: 80px
       @include font($textBlack, $regular, normal, 16px, 65px)
 
+      &:hover
+        cursor: pointer
+
     input
       margin-right: 20px
+      position: relative
+      z-index: 1
+
+      &:hover
+        cursor: pointer
 
   &_bottom
     padding: 30px 60px
@@ -343,6 +359,47 @@ input.btn_red
     span
       font-family: $bold
       font-weight: bold
+
+.range_nums
+  display: flex
+  justify-content: space-between
+  margin-bottom: 30px
+
+.rangeSlider
+  margin-bottom: 10px
+
+  &.ui-slider-horizontal
+    height: 1px
+    border: none
+    background: #d3d5d4
+
+  .ui-widget-header
+    height: 1px
+    border: none
+    background: #82766d
+
+  &.ui-slider-horizontal .ui-slider-handle
+    top: -.6em
+    @include border-radius()
+    border: none
+    background: #82766d
+
+    &:hover
+      cursor: pointer
+      background: $red !important
+
+    &:focus, &:active
+      outline: none
+
+.customRadio
+  width: 25px
+  height: 25px
+  background: $white
+  @include border-radius()
+  position: absolute
+  top: 50%
+  +transform(translateY(-50%))
+  display: none
 
 .innerTitle.rectangle_top
   margin-bottom: 20px
@@ -597,6 +654,16 @@ input.btn_red
     background: $white
     @include border-radius(5px)
     margin: 0 10px
+    height: 400px
+    overflow: hidden
+    @include transition()
+
+    &:hover
+      @include box-shadow()
+      @include transition()
+
+    &:focus
+      outline: none
 
     &_top
       display: flex
@@ -613,6 +680,57 @@ input.btn_red
 
     &__city
       @include font($textBlack, $regular, normal, 15px, 26px)
+
+.slick-arrow
+  border: none
+  width: 50px
+  height: 50px
+  @include border-radius()
+  position: absolute
+  bottom: -40px
+  background: $white
+  @include transition()
+  @include font($textBlack, $regular, normal)
+
+  &:hover
+    background: $red
+    @include transition()
+    color: $white
+
+  &:focus
+    outline: none
+
+  &.slick-next
+    right: 10px
+
+  &.slick-prev
+    left: 10px
+
+.slick-dots
+  display: flex
+  position: absolute
+  left: 50%
+  +transform(translateX(-50%))
+
+  li
+    margin: 0 5px
+
+    button
+      background: $white
+      border: none
+      font-size: 0
+      @include border-radius()
+      width: 10px
+      height: 10px
+
+    &.slick-active button
+      background: $red
+
+    &:focus
+      outline: none
+
+.slick-list
+  padding-bottom: 100px
 
 .s_terms
   margin-bottom: 110px
@@ -646,6 +764,10 @@ input.btn_red
       a
         @include font($red, $bold, bold, 18px, 26px)
         text-decoration: underline
+        display: block
+
+        &:hover
+          text-decoration: none
 
   &__subtitle
     @include font($textBlack, $bold, bold, 16px, 26px)
@@ -708,7 +830,12 @@ input.btn_red
       background: $greyBg
       padding: 0 30px 40px
       text-align: center
+      @include transition()
       @include box-sizing()
+
+      &:hover
+        @include transition()
+        @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.17))
 
     img
       margin-top: -30px
@@ -727,6 +854,9 @@ input.btn_red
   height: 640px
   position: relative
   margin-bottom: 80px
+
+  .wrapper_fullHD
+    overflow: hidden
 
   .wrapper
     height: 640px
@@ -748,6 +878,7 @@ input.btn_red
     top: 50%
     right: 0
     +transform(translateY(-50%))
+    @include border-radius(5px)
 
     li
       display: flex
@@ -841,8 +972,10 @@ footer
     a
       color: $red
       text-decoration: underline
+      display: inline-block
+
+      &:hover
+        text-decoration: none
 
 /* RESPONSIVE */
 @import "responsive"
-/* HAMBURGER */
-@import "hamburger"
