@@ -106,12 +106,11 @@ $(document).ready(() => {
 
     calculate();
 
-    let submitCredit = $('#submitCredit');
     $('#calculatorSubmit').on('click', () => {
-        submitCredit.attr('data-percent', $('#percentForPay').attr('data-percent'));
-        submitCredit.attr('data-full-sum', $('#sumForPay').attr('data-full-sum'));
-        submitCredit.attr('data-month', $('#creditTerm').val());
-        submitCredit.attr('data-month-pay', $('#monthPay').attr('data-month-pay'));
+        $('#modalPercent').val($('#percentForPay').attr('data-percent'));
+        $('#modalFullSum').val($('#sumForPay').attr('data-full-sum'));
+        $('#modalMonth').val($('#creditTerm').val());
+        $('#modalMonthPay').val($('#monthPay').attr('data-month-pay'));
     });
 
     /**

@@ -1901,6 +1901,10 @@ footer .wrapper_fullHD hr {
   z-index: 1;
 }
 
+.modalNoDisplay {
+  display: none;
+}
+
 /* RESPONSIVE */
 @font-face {
   font-family: Proxima;
