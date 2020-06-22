@@ -46,6 +46,9 @@ $(document).ready(() => {
         max: 60,
         slide: function (event, ui) {
             creditTerm.val(ui.value);
+            let percent = $('#percentForPay');
+            percent.text(percent.attr('data-percent') * ui.value);
+            percent.attr('data-all-percent', percent.attr('data-percent') * ui.value);
             calculate();
         },
     });
@@ -68,6 +71,9 @@ $(document).ready(() => {
 
     creditTerm.on('blur', () => {
         secondSlider.slider("value", parseInt(creditTerm.val().replace(/\s/g, '')));
+        let percent = $('#percentForPay');
+        percent.text(percent.attr('data-percent') * creditTerm.val().replace(/\s/g, ''));
+        percent.attr('data-all-percent', percent.attr('data-percent') * creditTerm.val().replace(/\s/g, ''));
         calculate();
     });
 
@@ -78,11 +84,14 @@ $(document).ready(() => {
     let carChecked = $('.whereCar:checked');
     percentForPay.text(carChecked.data('percent'));
     percentForPay.attr('data-percent', carChecked.data('percent'));
+    percentForPay.attr('data-all-percent', carChecked.data('percent'));
 
     $('.whereCar').on('change', () => {
         let carChecked = $('.whereCar:checked');
-        percentForPay.text(carChecked.data('percent'));
+        let creditTerm = $('#creditTerm').val().replace(/\s/g, '');
+        percentForPay.text(carChecked.data('percent') * creditTerm);
         percentForPay.attr('data-percent', carChecked.data('percent'));
+        percentForPay.attr('data-all-percent', carChecked.data('percent') * creditTerm);
         calculate();
     });
 
@@ -90,7 +99,7 @@ $(document).ready(() => {
         let monthPay = $('#monthPay');
         let sumForPay = $('#sumForPay');
 
-        let percent = parseFloat(percentForPay.attr('data-percent')) / 100 + 1;
+        let percent = parseFloat(percentForPay.attr('data-all-percent')) / 100 + 1;
         let sum = parseInt(creditSum.val().replace(/\s/g, ''));
         let month = parseInt(creditTerm.val());
 
@@ -107,7 +116,7 @@ $(document).ready(() => {
     calculate();
 
     $('#calculatorSubmit').on('click', () => {
-        $('#modalPercent').val($('#percentForPay').attr('data-percent'));
+        $('#modalPercent').val($('#percentForPay').attr('data-all-percent'));
         $('#modalFullSum').val($('#sumForPay').attr('data-full-sum'));
         $('#modalMonth').val($('#creditTerm').val());
         $('#modalMonthPay').val($('#monthPay').attr('data-month-pay'));
@@ -136,7 +145,7 @@ $(document).ready(() => {
     });
 
     /**
-     * CHEKBOX
+     * CHECKBOX
      */
     let checkRules = $('#checkRules');
     let customCheck = $('.customCheck');
@@ -201,5 +210,37 @@ $(document).ready(() => {
         afterClose: function() {
             $('html').removeClass('scroll-disable');
         }
+    });
+
+    /**
+     * HAMBURGER
+     */
+    $('.menu-toggle-inner').on('click', function (e) {
+        $('.adaptive-menu-toggle').toggleClass('adaptive-menu-toggle--open');
+        $('.headerNav_adaptive').toggleClass('header_opened');
+    });
+
+    /**
+     * ANCHOR
+     */
+    let headerNav = $('.header__nav');
+    let headerNavAdaptive = $('.headerNav_adaptive');
+    let sDocument = $('body, html');
+
+    let onClickNav = (e) => {
+        sDocument.stop(true, false);
+        e.preventDefault();
+        let id = $(e.target).attr('href'),
+            top = $(id).offset().top - 80;
+        sDocument.animate({scrollTop: top}, 1500);
+        console.log(123);
+    };
+
+    headerNavAdaptive.on('click', 'a', (e) => {
+        onClickNav(e)
+    });
+
+    headerNav.on('click', 'a', (e) => {
+        onClickNav(e)
     });
 });

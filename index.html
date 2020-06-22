@@ -47,9 +47,32 @@
                 <a href="#">8 800 <span>859 08 80</span></a> <br/>
                 <a href="#">8 495 <span>771 25 85</span></a>
             </div>
-            <a href="#" class="btn btn_red">Вам перезвонить?</a>
+            <a href="#callback-modal-header" class="btn btn_red" data-fancybox-modal>Вам перезвонить?</a>
         </div>
     </div>
+
+    <div class="header__hamburger">
+        <a class="adaptive-menu-toggle" href="#">
+                <span class="menu-toggle-inner">
+                    <span class="menu-toggle-line menu-toggle-line--1"></span>
+                    <span class="menu-toggle-line menu-toggle-line--2"></span>
+                    <span class="menu-toggle-line menu-toggle-line--3"></span>
+                    <span class="menu-toggle-line menu-toggle-line--4"></span>
+                    <span class="menu-toggle-line menu-toggle-line--5"></span>
+                </span>
+        </a>
+    </div>
+    <nav class="headerNav_adaptive">
+        <ul class="headerNav__items_adaptive">
+            <li><a href="#s_calculator">Преимущества</a></li>
+            <li><a href="#s_time">Как это работает?</a></li>
+            <li><a href="#s_requirements">Комплектация</a></li>
+            <li><a href="#s_docs">Стоимость</a></li>
+            <li><a href="#s_feedback">Патенты и сертификаты</a></li>
+            <li><a href="#s_terms">Отзывы</a></li>
+            <li><a href="#s_additional">Отзывы</a></li>
+        </ul>
+    </nav>
 </header>
 
 <section class="s_firstScreen">
@@ -206,7 +229,7 @@
     </div>
 </section>
 
-<section class="s_time">
+<section id="s_time" class="s_time">
     <div class="wrapper">
         <div class="time">
             <div class="innerTitle rectangle_center rectangle_top">
@@ -256,7 +279,7 @@
     </div>
 </section>
 
-<section class="s_requirements">
+<section id="s_requirements" class="s_requirements">
     <div class="wrapper_fullHD">
         <img src="images/main/requirements.png" alt="photo">
         <div class="wrapper">
@@ -300,7 +323,7 @@
     </div>
 </section>
 
-<section class="s_docs">
+<section id="s_docs" class="s_docs">
     <div class="wrapper_fullHD">
         <div class="wrapper">
             <div class="docs">
@@ -341,7 +364,7 @@
     </div>
 </section>
 
-<section class="s_feedback">
+<section id="s_feedback" class="s_feedback">
     <div class="wrapper_fullHD">
         <img class="s_feedback__bg" src="images/main/slider-bg.png" alt="bg">
         <div class="wrapper">
@@ -356,19 +379,13 @@
                             <div class="feedback__item_top">
                                 <img src="images/main/feedback1.png" alt="photo">
                                 <div class="feedback__item_top__content">
-                                    <div class="feedback__item__name">Константин Геннадьевич</div>
+                                    <div class="feedback__item__name">Гончаров Игорь Васильевич</div>
                                     <div class="feedback__item__city">г. Санкт-Петербург</div>
                                 </div>
                             </div>
-                            <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по
-                                автомобилю
-                                и вам. На основе полученных данных сообщает Вам - одобрено или нет.После одобрения
-                                заявки,
-                                Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
-                                осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
-                                получаете деньги. или авто удобным способом - наличными, через перевод в банк, на
-                                банковскую
-                                карту любого банка.</p>
+                            <p>Благодарю компанию "ЕСП АВТОЛИЗИНГ", за оперативную поддержку в решении моего финансового
+                                вопроса, оперативно проконсультировали, сопроводили договор, деньги получил за 3 часа.
+                                Всем доволен, рекомендую.</p>
                         </div>
                     </div>
 
@@ -377,13 +394,15 @@
                             <div class="feedback__item_top">
                                 <img src="images/main/feedback2.png" alt="photo">
                                 <div class="feedback__item_top__content">
-                                    <div class="feedback__item__name">Константин Геннадьевич</div>
+                                    <div class="feedback__item__name">Павлов Денис</div>
                                     <div class="feedback__item__city">г. Санкт-Петербург</div>
                                 </div>
                             </div>
-                            <p>Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
-                                осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
-                                получаете деньги.</p>
+                            <p>Долго выбирал компанию, где можно получить деньги. Сравнивал в интернете мнения. Конечно,
+                                много людей с плохими мнениями в принципе, но куда деваться, если банк не дает денег?
+                                Обратился в "ЕСП АВТОЛИЗИНГ", все четко и по делу, проверили - быстро одобрили. Приехал
+                                только на подписание договора, все оформили за 20 минут и деньги через 1 час упали на
+                                карточку, все хорошо.</p>
                         </div>
                     </div>
 
@@ -392,58 +411,44 @@
                             <div class="feedback__item_top">
                                 <img src="images/main/feedback3.png" alt="photo">
                                 <div class="feedback__item_top__content">
-                                    <div class="feedback__item__name">Константин Геннадьевич</div>
+                                    <div class="feedback__item__name">Багарян Армен Робертович</div>
                                     <div class="feedback__item__city">г. Санкт-Петербург</div>
                                 </div>
                             </div>
-                            <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по
-                                автомобилю
-                                и вам. На основе полученных данных сообщает Вам - одобрено или нет. После одобрения
-                                заявки,
-                                Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
-                                осмотреть автобиль и проверить документы.</p>
+                            <p>Все прошло быстро и без лишних вопросов. Хорошо ребята подсказали, были небольшие долги
+                                по штрафам, их закрыл и успешно оформил. Отзыв пишу по факту внесения первого платежа,
+                                все отлично, спасибо. Специалисты всегда на связи, всегда подсказывают, что и как
+                                сделать - как поступить правильно. Рекомендую.</p>
                         </div>
                     </div>
 
                     <div class="feedback__item">
                         <div class="feedback__item__overflow">
                             <div class="feedback__item_top">
-                                <img src="images/main/feedback4.png" alt="photo">
+                                <img src="images/main/feedback2.png" alt="photo">
                                 <div class="feedback__item_top__content">
-                                    <div class="feedback__item__name">Константин Геннадьевич</div>
+                                    <div class="feedback__item__name">Белоус И.Н.</div>
                                     <div class="feedback__item__city">г. Санкт-Петербург</div>
                                 </div>
                             </div>
-                            <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по
-                                автомобилю
-                                и вам. На основе полученных данных сообщает Вам - одобрено или нет.После одобрения
-                                заявки,
-                                Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
-                                осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
-                                получаете деньги. или авто удобным способом - наличными, через перевод в банк, на
-                                банковскую
-                                карту любого банка.</p>
+                            <p>Благодарю компанию "ООО ЕСП Автолизинг" за оперативную работу и быструю выдачу денежных
+                                средств. Свои вопросы были быстро решены, за что и спасибо и пожелание компании успехов
+                                в деятельности.</p>
                         </div>
                     </div>
 
                     <div class="feedback__item">
                         <div class="feedback__item__overflow">
                             <div class="feedback__item_top">
-                                <img src="images/main/feedback5.png" alt="photo">
+                                <img src="images/main/feedback3.png" alt="photo">
                                 <div class="feedback__item_top__content">
-                                    <div class="feedback__item__name">Константин Геннадьевич</div>
+                                    <div class="feedback__item__name">Гусев Алексей Витальевич</div>
                                     <div class="feedback__item__city">г. Санкт-Петербург</div>
                                 </div>
                             </div>
-                            <p>Вы обращаетесь в компанию «Алвек Лизинг», специалист задает уточняющие вопросы по
-                                автомобилю
-                                и вам. На основе полученных данных сообщает Вам - одобрено или нет.После одобрения
-                                заявки,
-                                Вы приезжаете в офис, где уже подготовлен пакет документов, специалисту осталось только
-                                осмотреть автобиль и проверить документы. Если все в порядке, подписываете договор и
-                                получаете деньги. или авто удобным способом - наличными, через перевод в банк, на
-                                банковскую
-                                карту любого банка.</p>
+                            <p>Спасибо "ЕСП Автолизинг" за проделанную работу и финансовую помощь, которую удалось
+                                получить вовремя. Обращаюсь постоянно, всякое бывает, спасибо за лояльное отношение к
+                                своему постоянному клиенту!</p>
                         </div>
                     </div>
                 </div>
@@ -452,7 +457,7 @@
     </div>
 </section>
 
-<section class="s_terms">
+<section id="s_terms" class="s_terms">
     <div class="wrapper">
         <div class="terms">
             <div class="innerTitle_normal">
@@ -510,7 +515,7 @@
     </div>
 </section>
 
-<section class="s_additional">
+<section id="s_additional" class="s_additional">
     <div class="wrapper">
         <div class="additional">
             <div class="subtitle_line">
@@ -544,7 +549,7 @@
     </div>
 </section>
 
-<section class="s_map">
+<section id="s_map" class="s_map">
     <div class="wrapper_fullHD">
         <script type="text/javascript" charset="utf-8" async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4781ddd815eb05e32537b42cedc8c669829de104432184346d2e22b87153a359&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
@@ -657,6 +662,161 @@
         <div class="default-form__group">
             <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
             <button id="submitCredit" type="submit" class="default-form__submit default-form__submit--full btn btn_red">
+                отправить заявку
+            </button>
+        </div>
+    </form>
+</div>
+
+<div id="callback-modal-header" class="modal modal-default">
+    <div class="modal-default__title">Вам перезвонить?</div>
+    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
+    <form class="callback-form default-form">
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
+                       required>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="tel" class="input_round default-form__input"
+                       placeholder="+7 (___) - ___ -__ - __" required>
+            </label>
+        </div>
+        <div class="modal__personaldata">
+            <label>
+                <input type="checkbox" required checked>
+                Согласен(а) с <a href="#">условиями обработки данных</a>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
+                отправить заявку
+            </button>
+        </div>
+    </form>
+</div>
+
+<div id="callback-modal-firstScreen" class="modal modal-default">
+    <div class="modal-default__title">Вам перезвонить?</div>
+    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
+    <form class="callback-form default-form">
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
+                       required>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="tel" class="input_round default-form__input"
+                       placeholder="+7 (___) - ___ -__ - __" required>
+            </label>
+        </div>
+        <div class="modal__personaldata">
+            <label>
+                <input type="checkbox" required checked>
+                Согласен(а) с <a href="#">условиями обработки данных</a>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
+                отправить заявку
+            </button>
+        </div>
+    </form>
+</div>
+
+<div id="callback-modal-terms" class="modal modal-default">
+    <div class="modal-default__title">Отправить заявку</div>
+    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
+    <form class="callback-form default-form">
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
+                       required>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="tel" class="input_round default-form__input"
+                       placeholder="+7 (___) - ___ -__ - __" required>
+            </label>
+        </div>
+        <div class="modal__personaldata">
+            <label>
+                <input type="checkbox" required checked>
+                Согласен(а) с <a href="#">условиями обработки данных</a>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
+                отправить заявку
+            </button>
+        </div>
+    </form>
+</div>
+
+<div id="callback-modal-docs" class="modal modal-default">
+    <div class="modal-default__title">Отправить заявку</div>
+    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
+    <form class="callback-form default-form">
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
+                       required>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="tel" class="input_round default-form__input"
+                       placeholder="+7 (___) - ___ -__ - __" required>
+            </label>
+        </div>
+        <div class="modal__personaldata">
+            <label>
+                <input type="checkbox" required checked>
+                Согласен(а) с <a href="#">условиями обработки данных</a>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
+                отправить заявку
+            </button>
+        </div>
+    </form>
+</div>
+
+<div id="callback-modal-map" class="modal modal-default">
+    <div class="modal-default__title">Заказать обратный звонок</div>
+    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
+    <form class="callback-form default-form">
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
+                       required>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <label>
+                <input type="text" name="tel" class="input_round default-form__input"
+                       placeholder="+7 (___) - ___ -__ - __" required>
+            </label>
+        </div>
+        <div class="modal__personaldata">
+            <label>
+                <input type="checkbox" required checked>
+                Согласен(а) с <a href="#">условиями обработки данных</a>
+            </label>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
                 отправить заявку
             </button>
         </div>
