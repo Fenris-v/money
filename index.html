@@ -47,7 +47,7 @@
                 <a href="#">8 800 <span>859 08 80</span></a> <br/>
                 <a href="#">8 495 <span>771 25 85</span></a>
             </div>
-            <a href="#callback-modal-header" class="btn btn_red" data-fancybox-modal>Вам перезвонить?</a>
+            <a href="#callback-modal-re" class="btn btn_red" data-fancybox-modal>Вам перезвонить?</a>
         </div>
     </div>
 
@@ -317,7 +317,7 @@
                     </li>
                     <li><p>Иномарки <span>не старше 15 лет</span>, отечественные и китайские не старше 6 лет.</p></li>
                 </ul>
-                <a href="#" class="btn btn_red">отправить заявку</a>
+                <a href="#callback-modal-task" class="btn btn_red" data-fancybox-modal>отправить заявку</a>
             </div>
         </div>
     </div>
@@ -356,7 +356,7 @@
                     получаете деньги или авто удобным способом - наличными, через перевод в банк, на банковскую карту
                     любого банка.</p>
 
-                <a href="#" class="btn btn_red">отправить заявку</a>
+                <a href="#callback-modal-task" class="btn btn_red" data-fancybox-modal>отправить заявку</a>
 
                 <img class="docs__bg" src="images/main/docs.png" alt="bg">
             </div>
@@ -576,7 +576,7 @@
                         </li>
                     </ul>
 
-                    <a href="#" class="btn btn_red">заказать обратный звонок</a>
+                    <a href="#callback-modal-re" class="btn btn_red" data-fancybox-modal>заказать обратный звонок</a>
                     <div class="map__social">
                         <ul>
                             <li>
@@ -647,7 +647,7 @@
             </label>
         </div>
         <div class="modal__personaldata">
-            <div class="customCheck"></div>
+            <div id="customCheckCalculate" class="customCheck"></div>
             <label>
                 <input id="checkRules" type="checkbox" required checked>
                 Согласен(а) с <a href="#">условиями обработки данных</a>
@@ -668,7 +668,7 @@
     </form>
 </div>
 
-<div id="callback-modal-header" class="modal modal-default">
+<div id="callback-modal-re" class="modal modal-default">
     <div class="modal-default__title">Вам перезвонить?</div>
     <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
     <form class="callback-form default-form">
@@ -685,8 +685,9 @@
             </label>
         </div>
         <div class="modal__personaldata">
+            <div id="customCheckRe" class="customCheck"></div>
             <label>
-                <input type="checkbox" required checked>
+                <input id="checkRulesRe" type="checkbox" required checked>
                 Согласен(а) с <a href="#">условиями обработки данных</a>
             </label>
         </div>
@@ -699,8 +700,8 @@
     </form>
 </div>
 
-<div id="callback-modal-firstScreen" class="modal modal-default">
-    <div class="modal-default__title">Вам перезвонить?</div>
+<div id="callback-modal-task" class="modal modal-default">
+    <div class="modal-default__title">Оставить заявку</div>
     <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
     <form class="callback-form default-form">
         <div class="default-form__group">
@@ -716,101 +717,9 @@
             </label>
         </div>
         <div class="modal__personaldata">
+            <div id="customCheckTask" class="customCheck"></div>
             <label>
-                <input type="checkbox" required checked>
-                Согласен(а) с <a href="#">условиями обработки данных</a>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
-            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
-                отправить заявку
-            </button>
-        </div>
-    </form>
-</div>
-
-<div id="callback-modal-terms" class="modal modal-default">
-    <div class="modal-default__title">Отправить заявку</div>
-    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
-    <form class="callback-form default-form">
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
-                       required>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="tel" class="input_round default-form__input"
-                       placeholder="+7 (___) - ___ -__ - __" required>
-            </label>
-        </div>
-        <div class="modal__personaldata">
-            <label>
-                <input type="checkbox" required checked>
-                Согласен(а) с <a href="#">условиями обработки данных</a>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
-            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
-                отправить заявку
-            </button>
-        </div>
-    </form>
-</div>
-
-<div id="callback-modal-docs" class="modal modal-default">
-    <div class="modal-default__title">Отправить заявку</div>
-    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
-    <form class="callback-form default-form">
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
-                       required>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="tel" class="input_round default-form__input"
-                       placeholder="+7 (___) - ___ -__ - __" required>
-            </label>
-        </div>
-        <div class="modal__personaldata">
-            <label>
-                <input type="checkbox" required checked>
-                Согласен(а) с <a href="#">условиями обработки данных</a>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
-            <button type="submit" class="default-form__submit default-form__submit--full btn btn_red">
-                отправить заявку
-            </button>
-        </div>
-    </form>
-</div>
-
-<div id="callback-modal-map" class="modal modal-default">
-    <div class="modal-default__title">Заказать обратный звонок</div>
-    <div class="modal-default__subtitle">Мы перезвоним вам в ближайшее время</div>
-    <form class="callback-form default-form">
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="name" class="input_round default-form__input" placeholder="Введите имя"
-                       required>
-            </label>
-        </div>
-        <div class="default-form__group">
-            <label>
-                <input type="text" name="tel" class="input_round default-form__input"
-                       placeholder="+7 (___) - ___ -__ - __" required>
-            </label>
-        </div>
-        <div class="modal__personaldata">
-            <label>
-                <input type="checkbox" required checked>
+                <input id="checkRulesTask" type="checkbox" required checked>
                 Согласен(а) с <a href="#">условиями обработки данных</a>
             </label>
         </div>

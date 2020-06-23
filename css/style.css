@@ -872,6 +872,7 @@ input.btn_red {
   padding-top: 40px;
   font-family: ProximaBold, sans-serif;
   font-weight: bold;
+  font-size: 30px;
 }
 .calculator__num {
   font-size: 75px;
@@ -1428,6 +1429,7 @@ input.btn_red {
   border-radius: 50%;
   width: 10px;
   height: 10px;
+  flex-shrink: 0;
 }
 .slick-dots li.slick-active button {
   background: #d51c2a;
@@ -2780,6 +2782,26 @@ footer .wrapper_fullHD hr {
 
   .footer_top .footer__terms {
     padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    padding-bottom: 10px;
+  }
+  .header .btn {
+    display: none;
+  }
+
+  .header__logo {
+    width: 75%;
+  }
+
+  .firstScreen h1 {
+    margin-bottom: 15px;
+  }
+
+  .firstScreen h1, .firstScreen__subtitle {
+    text-align: center;
   }
 }
 

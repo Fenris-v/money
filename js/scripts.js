@@ -47,7 +47,6 @@ $(document).ready(() => {
         slide: function (event, ui) {
             creditTerm.val(ui.value);
             let percent = $('#percentForPay');
-            percent.text(percent.attr('data-percent') * ui.value);
             percent.attr('data-all-percent', percent.attr('data-percent') * ui.value);
             calculate();
         },
@@ -72,7 +71,6 @@ $(document).ready(() => {
     creditTerm.on('blur', () => {
         secondSlider.slider("value", parseInt(creditTerm.val().replace(/\s/g, '')));
         let percent = $('#percentForPay');
-        percent.text(percent.attr('data-percent') * creditTerm.val().replace(/\s/g, ''));
         percent.attr('data-all-percent', percent.attr('data-percent') * creditTerm.val().replace(/\s/g, ''));
         calculate();
     });
@@ -89,7 +87,7 @@ $(document).ready(() => {
     $('.whereCar').on('change', () => {
         let carChecked = $('.whereCar:checked');
         let creditTerm = $('#creditTerm').val().replace(/\s/g, '');
-        percentForPay.text(carChecked.data('percent') * creditTerm);
+        percentForPay.text(carChecked.data('percent'));
         percentForPay.attr('data-percent', carChecked.data('percent'));
         percentForPay.attr('data-all-percent', carChecked.data('percent') * creditTerm);
         calculate();
@@ -148,7 +146,7 @@ $(document).ready(() => {
      * CHECKBOX
      */
     let checkRules = $('#checkRules');
-    let customCheck = $('.customCheck');
+    let customCheck = $('#customCheckCalculate');
     checkRules.css('opacity', 0);
     customCheck.css('display', 'block');
 
@@ -161,6 +159,40 @@ $(document).ready(() => {
             customCheck.css('background', '#d51c2a');
         } else {
             customCheck.css('background', '#ffffff');
+        }
+    });
+
+    let checkRulesRe = $('#checkRulesRe');
+    let customCheckRe = $('#customCheckRe');
+    checkRulesRe.css('opacity', 0);
+    customCheckRe.css('display', 'block');
+
+    if (checkRulesRe.prop('checked')) {
+        customCheckRe.css('background', '#d51c2a');
+    }
+
+    checkRulesRe.on('change', () => {
+        if (checkRulesRe.prop('checked')) {
+            customCheckRe.css('background', '#d51c2a');
+        } else {
+            customCheckRe.css('background', '#ffffff');
+        }
+    });
+
+    let checkRulesTask = $('#checkRulesTask');
+    let customCheckTask = $('#customCheckTask');
+    checkRulesTask.css('opacity', 0);
+    customCheckTask.css('display', 'block');
+
+    if (checkRulesTask.prop('checked')) {
+        customCheckTask.css('background', '#d51c2a');
+    }
+
+    checkRulesTask.on('change', () => {
+        if (checkRulesTask.prop('checked')) {
+            customCheckTask.css('background', '#d51c2a');
+        } else {
+            customCheckTask.css('background', '#ffffff');
         }
     });
 
